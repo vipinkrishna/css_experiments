@@ -1,0 +1,71 @@
+/* https://github.com/vipinkrishna */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 400px) {
+    .card {
+        padding: 20px;
+        margin: 20px;
+        flex-direction: column;
+        width: 400px;
+    }
+
+    .image img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 40px;
+        margin: 40px;
+        flex-direction: column;
+        width: 768px;
+    }
+
+    .image img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        padding: 50px;
+        margin: 50px;
+        flex-direction: row;
+        width: 1200px;
+    }
+
+    .image img {
+        width: 500px;
+        margin: 60px;
+        /* border-radius: 5%; */
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+}
