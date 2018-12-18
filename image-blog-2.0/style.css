@@ -16,8 +16,10 @@ body {
 }
 
 .start {
+    position: relative;
     background: #262626;
     height: 100vh;
+    z-index: 5;
 }
 
 .start h1 {
@@ -28,7 +30,7 @@ body {
     margin: 0 auto 40px;
     font-size: 80px;
     color: #fff;
-    text-shadow: 4px 4px 16px rgba(255,255,0,0.5);
+    text-shadow: 0px 0px 16px rgba(255,0,0,0.9);
 }
 
 .start a {
@@ -179,6 +181,7 @@ body {
     border-right: 30px solid transparent;
     border-bottom: 30px solid green;
     transition: 0.3s;
+    z-index: 4;
 }
 
 .begin:hover {
