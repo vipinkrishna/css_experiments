@@ -1,0 +1,56 @@
+/* https://github.com/vipinkrishna */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #e84118;
+    font-family: sans-serif;
+}
+
+.searchbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.searchbox:hover > .searchtxt {
+    width: 240px;
+    padding: 0 16px;
+}
+
+.searchbox:hover > .searchbtn {
+    background: #262626;
+    color: #777;
+}
+
+.searchbtn {
+    color: red;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchtxt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0px;
+    transition: 0.4s;
+}
