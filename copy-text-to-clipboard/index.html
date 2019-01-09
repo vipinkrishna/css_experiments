@@ -1,0 +1,33 @@
+<!-- https://github.com/vipinkrishna -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPY TEXT TO CLIPBOARD</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function execute() {
+            var code = document.querySelector('#code');
+            navigator.clipboard.writeText(code.textContent).then(console.log(code.textContent));
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <pre>
+            <code id="code">
+        function say() {
+            console.log('CODE MADLY!');
+        }
+        say();
+            </code>
+        </pre>
+        <button onclick="execute()">Copy</button>
+    </div>
+</body>
+
+</html>
