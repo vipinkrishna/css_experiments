@@ -1,0 +1,59 @@
+/* https://github.com/vipinkrishna */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: basic-sans, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125em;
+    line-height: 1.6;
+    color: #333;
+    background: #ddd;
+}
+
+.content {
+    background: white;
+    width: 70vw;
+    padding: 3em;
+    box-shadow: 0 0 3em rgba(0,0,0,0.15);
+}
+
+.title {
+    margin: 0 0 0.5em;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 3rem;
+    color: #ee6352;
+    line-height: 0.8;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+@mixin triangle($size, $side, $left: 0, $top: 0, $color: #ee6352) {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: $left;
+        top: $top;
+        border: $size solid transparent;
+        border-#{$side}-color: $color;
+    }
+}
+
+.important {
+    color: rgba(0,0,0,0.9);
+    @include triangle(1em, left, $left: -1.5em);
+}
+
+.title {
+    @include triangle(2rem, left, $left: -1.5rem, $color: blue);
+}
