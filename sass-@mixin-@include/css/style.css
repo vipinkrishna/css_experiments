@@ -1,0 +1,70 @@
+/* https://github.com/vipinkrishna */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: basic-sans, sans-serif;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+}
+
+.content {
+  background: white;
+  width: 70vw;
+  padding: 3em;
+  -webkit-box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3rem;
+  color: #ee6352;
+  line-height: 0.8;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.important {
+  color: rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.important::after {
+  content: '';
+  position: absolute;
+  left: -1.5em;
+  top: 0;
+  border: 1em solid transparent;
+  border-left-color: #ee6352;
+}
+
+.title {
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  border: 2rem solid transparent;
+  border-left-color: blue;
+}
+/*# sourceMappingURL=style.css.map */
