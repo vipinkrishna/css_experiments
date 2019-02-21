@@ -1,0 +1,94 @@
+/* https://github.com/vipinkrishna */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Poppins, sans-serif;
+}
+
+header {
+    width: 100%;
+    background: #000;
+}
+
+header ul { 
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* background: red; */
+    padding: 0;
+}
+
+header ul li {
+    list-style: none;
+    position: relative;
+    padding: 10px 0;
+    transition: 0.5s;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+header ul li:hover {
+    background: #2196f3;
+}
+
+header ul li:last-child {
+    border-right: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 0 20px;
+    /* background: red; */
+    color: #fff;
+}
+
+header ul li ul {
+    position: absolute;
+    background: #000;
+    top: 45px;
+    left: 0;
+    display: block;
+    width: 200px;
+    /* transition: 0.5s; */
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+header ul li:hover ul {
+    transition-delay: 0.5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+header ul li ul li {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+header ul li ul li:last-child{
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    header ul {
+        display: block;
+    }
+
+    header ul li {
+        display: block;
+    }
+
+    header ul li ul {
+        width: 60%;
+        /* width: 100%; */
+        z-index: 1;
+        background: #888;
+        /* box-shadow: 2px 2px 4px rgba(255,255,255,0.5); */
+    }
+}
