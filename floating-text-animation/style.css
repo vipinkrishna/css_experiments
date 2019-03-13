@@ -11,7 +11,6 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: Poppins, sans-serif;
-    /* background: radial-gradient(#80adc3, #495e69); */
     background: radial-gradient(#08cc12, #075e04);
 }
 
