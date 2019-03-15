@@ -1,0 +1,56 @@
+/* https://github.com/vipinkrishna */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins, sans-serif;
+    user-select: none;
+}
+
+.popupmenu {
+    width: 300px;
+    height: 500px;
+    background: #222;
+    box-shadow: 0 1px 10px rgba(100,100,255,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.popupmenu ul li {
+    margin: 0;
+    padding: 5px 30px;
+    color: #aaa;
+    cursor: default;
+}
+
+.popupmenu ul hr {
+    height: 2px;
+    opacity: 0.2;
+    background-color: #999;
+    margin: 5px 10px;
+    padding: 0;
+    border: 0;
+}
+
+.popupmenu ul li:hover {
+    background-color: #000;
+}
+
+.popupmenu ul li:active {
+    background-color: #444;
+}
