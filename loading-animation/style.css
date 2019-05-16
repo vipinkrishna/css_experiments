@@ -1,0 +1,75 @@
+/* https://github.com/vipinkrishna */
+
+:root {
+    --size: 100px;
+    --dotsize: 20px;
+    --adjustx: calc(-1 * var(--dotsize)/2);
+    --adjustx1: calc(-4 * var(--dotsize)/2);
+    --adjustx2: calc(2 * var(--dotsize)/2);
+    --adjusty: calc(-1 * var(--dotsize)/2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wave {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+
+  /* background-color: red; */
+
+  /* margin-top: 10px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+}
+
+.dot {
+  position: absolute;
+  width: var(--dotsize);
+  height: var(--dotsize);
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: #333;
+}
+
+.dot1 {
+    transform: translate(var(--adjustx1), calc(var(--adjusty) * -1));
+    animation: wave1 1.3s linear infinite;
+}
+
+.dot2 {
+    transform: translate(var(--adjustx), calc(var(--adjusty) * -1));
+    animation: wave2 1.3s linear infinite;
+    animation-delay: -1.1s;
+}
+
+.dot3 {
+    transform: translate(var(--adjustx2), calc(var(--adjusty) * -1));
+    animation: wave3 1.3s linear infinite;
+    animation-delay: -0.9s;
+}
+
+@keyframes wave1 {
+  30% {
+    transform: translate(var(--adjustx1), calc(var(--adjusty) * 3));
+  }
+}
+@keyframes wave2 {
+  30% {
+    transform: translate(var(--adjustx), calc(var(--adjusty) * 3));
+  }
+}
+@keyframes wave3 {
+  30% {
+    transform: translate(var(--adjustx2), calc(var(--adjusty) * 3));
+  }
+}
