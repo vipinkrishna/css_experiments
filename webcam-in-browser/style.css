@@ -1,0 +1,25 @@
+/* https://github.com/vipinkrishna */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stream {
+    background: #333;
+}
+
+.camera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    background: #444;
+    box-shadow: inset 0 0 10px 5px rgba(0,0,0,0.9), 0 0 50px 5px rgba(0,0,0,0.5);
+}
