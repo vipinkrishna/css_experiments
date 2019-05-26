@@ -1,0 +1,112 @@
+/* https://github.com/vipinkrishna */
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: Impact, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: limegreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  opacity: 0.2;
+  transform: translateX(-50%);
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0 0 10px 2px rgba(0,0,0,0.5), 0 0 10px 2px rgba(0,0,0,0.5);
+}
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.5rem;
+}
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock::after {
+  content: '';
+  position: absolute;
+  background-color: red;
+  z-index: 12;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock .hand.second {
+  /* --rotation: 210; */
+  width: 3px;
+  height: 50%;
+  background-color: red;
+  bottom: calc(50% - 30px);
+  transform-origin: 50% calc(100% - 30px);
+  z-index: 12;
+}
+
+.clock .hand.minute {
+  /* --rotation: 60; */
+  width: 5px;
+  height: 40%;
+  background-color: blue;
+  z-index: 11;
+}
+
+.clock .hand.hour {
+  /* --rotation: 305; */
+  width: 10px;
+  height: 30%;
+  background-color: green;
+}
